@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- 1. root -->
+    <div id="root"></div>
+
+
+
+    <!-- 2.create element -->
+    <script type="text/babel">
+        function App() {
+            let name = 'Aniket';
+            let nav = [
+                {
+                    name: "home",
+                    link: "/"
+                },
+                {
+                    name: "contact-us",
+                    link: "/aboutus.html"
+                },
+                {
+                    name: "home",
+                    link: "/"
+                },
+                {
+                    name: "contact-us",
+                    link: "/aboutus.html"
+                }
+            ]
+            return (
+                <>
+                    <h1>Hello</h1>
+                    <h2>Student Name:{name}</h2>
+                    <h3>Fav Colors</h3>
+
+                    <ul>
+                        {nav.map((value, index) => (
+                            <li key={index} style={{color:"red", fontSize:"34px"}}><a target="_blank" href={value.link}>{value.name}</a></li>
+                        ))}
+                    </ul>
+                </>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+
+    <!--  <ul>
+                        {color.map((value, index) => (
+                            <li key={index}><a href="">{value}</a></li>
+                        ))}
+                    </ul> -->
+
+</body>
+
+</html>
