@@ -38,6 +38,7 @@
         }
         let ScoreBtn = () => {
             return (<>
+                <button onClick={() => add(0)}>0</button>
                 <button onClick={() => add(1)}>1</button>
                 <button onClick={() => add(2)}>2</button>
                 <button onClick={() => add(3)}>3</button>
@@ -53,8 +54,8 @@
                 <>
                     {ballWiseRes.map((res, index) => (
                         <>
-                        {index % 6 === 0 ? <br/> : null}
-                        <span key={index}>{res === 0 ? <strong key={index}>.</strong> : res}</span>&nbsp;&nbsp;&nbsp;
+                            {index % 6 === 0 ? <br /> : null}
+                            <span key={index}>{res === 0 ? <strong key={index}>0</strong> : res}</span>&nbsp;&nbsp;&nbsp;
                         </>
                     ))}
                 </>
